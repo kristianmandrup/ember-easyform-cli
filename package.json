@@ -20,8 +20,11 @@
   },
   "keywords": [
     "ember-addon",
-    "validate",
-    "validation",
+    "ember",
+    "templates",
+    "helpers",
+    "views",
+    "easy",
     "forms"
   ],
   "ember-addon": {

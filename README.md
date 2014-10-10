@@ -22,13 +22,51 @@ module.exports = {
 
 ## Ember CLI installation
 
-First install [bower distribution](git://github.com/kristianmandrup/ember-easyform.git). In your `bower.json` file insert this entry for `"devDependencies"`:
+In your Ember CLI app `packages.json` file, add this `"devDependency"`: 
+
+```json
+  "ember-easyform-cli": "git://github.com/kristianmandrup/ember-easyform-cli.git#master"
+```
+
+And run `npm install`
+
+### Bower library installation
+
+The addon depends on `ember-easyForm` being installed as a bower component.
+
+Since the `package.json` file now has an "install" script defined, it should auto-install its bower dependencies!!
+
+```js
+"scripts": {
+  "install": "bower install"
+```
+
+This should install the dependencies listed in the `bower.json` file of this addon (named `"dummy"` for this reason!)
+
+```js
+{
+  "name": "bower-dummy",
+  "devDependencies": {
+    "ember-easyForm": "kristianmandrup/ember-easyForm.git#master"
+  }
+}
+```
+
+If this for some reason doesn't work or you want to install manually:
+
+Try `bower install kristianmandrup/ember-easyForm.git#master --save-dev`
+
+Which should install `ember-easyForm` bower distribution and save it into your `bower.json` file.
+
+Or alternatively...
+
+Install [bower distribution](git://github.com/kristianmandrup/ember-easyform.git). In your `bower.json` file insert this entry for `"devDependencies"`:
 
 ```json
 {
   "devDependencies": {
     // others ...
-    "ember-easyform": "git://github.com/kristianmandrup/ember-easyform.git#master"
+    "ember-easyform": "git://github.com/kristianmandrup/ember-easyForm.git#master"
   }
 }
 ```
@@ -43,19 +81,21 @@ In your `packages.json` file, add this `"devDependency"` entry:
 
 Run `npm install`
 
-Now test that it works:
+### Test if installation works
 
 Run `ember serve`
 
-This should make Broccoli build the project, pick up the addon *ember-easyform-cli* in the `node_modules/` folder by the keyword
- `ember-addon`. Load the main addon file `index.js` which adss an `app.import` to the Broccoli build process to pick up the 
- bower component installed in the bower directory of the app, see [ember-easyform-cli](git://github.com/kristianmandrup/ember-easyform-cli.git)
+While Broccoli build the project it will pick up the addon *ember-easyform-cli* in the `node_modules/` folder by identifying it with the `package.json` keyword: `ember-addon`. 
+
+Ember CLI (via Broccoli) will load the main addon file `index.js` which adds an `app.import` to the Broccoli build process to the Broccoli build process, which picks up the installed bower component [ember-easyform](git://github.com/kristianmandrup/ember-easyform.git) to make it part of the application build.
 
 *Test in the browser*
 
+Now you can serve the final build (the library will be part of `vendor.js`).
+
  `$ open localhost:4200`
 
-In the console of Chrome web tools:
+In the console of your browser web tools:
 
 ```bash
 > Ember.EasyForm.VERSION

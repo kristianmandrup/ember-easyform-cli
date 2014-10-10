@@ -1,9 +1,6 @@
 {
-  "name": "ember-easyform",
-  "version": "0.0.1",
-  "description": "Form helpers, templates and views for Ember apps",
-  "license": "MIT",
-  "main": [
-    "distributions/ember-validations-cli.js"
-  ],  
+  "name": "bower-dummy",
+  "devDependencies": {
+    "ember-easyForm": "kristianmandrup/ember-easyForm.git#master"
+  }
 }

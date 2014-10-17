@@ -1,6 +1,6 @@
 {
   "name": "bower-dummy",
   "devDependencies": {
-    "ember-easyForm": "kristianmandrup/ember-easyForm.git#master"
+    "ember-easyform": "kristianmandrup/ember-easyForm.git#master"
   }
 }

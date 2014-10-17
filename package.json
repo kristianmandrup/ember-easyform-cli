@@ -1,6 +1,6 @@
 {
   "name": "ember-easyform-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Form helpers, templates and views for Ember Ember CLI apps",
   "directories": {
     "doc": "doc",
@@ -10,7 +10,7 @@
     "start": "ember server",
     "build": "ember build",
     "test": "ember test",
-    "install": "bower install --save-dev",
+    "install": "bower install --save-dev"
   },
   "repository": {
     "type": "git",

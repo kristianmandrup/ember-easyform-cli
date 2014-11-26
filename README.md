@@ -47,7 +47,7 @@ This should install the dependencies listed in the `bower.json` file of this add
 {
   "name": "bower-dummy",
   "devDependencies": {
-    "ember-easyform": "kristianmandrup/ember-easyForm.git#master"
+    "ember-easyform": "kristianmandrup/ember-easyForm#master"
   }
 }
 ```

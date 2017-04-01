@@ -1,5 +1,7 @@
 # Ember EasyForm for Ember CLI #
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristianmandrup/ember-easyform-cli.svg)](https://greenkeeper.io/)
+
 Ember EasyForm for use with Ember via Bower
 
 Can be used with [ember-validations](https://github.com/kristianmandrup/ember-validations)
